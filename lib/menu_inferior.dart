@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:sotapp/pantallas/productos/productos_tipos.dart';
 import 'pantallas/chango/chango.dart';
-import 'pantallas/productos/productos_grilla.dart';
 
 class MenuInferior extends StatefulWidget {
   @override
@@ -11,14 +11,14 @@ class _MenuInferiorState extends State<MenuInferior> {
   int _indicePantalla = 0;
 
   static List<Widget> _pantallas = <Widget>[
-    VistaGrilla(),
+        ProductosTiposPage(),
     Chango(),
   ];
 
   static List<BottomNavigationBarItem> botonesDelMenu = [
     BottomNavigationBarItem(
       icon: Icon(Icons.search),
-      title: Text('Explorar productos'),
+      title: Text('Categorias'),
       backgroundColor: Colors.black,
     ),
     BottomNavigationBarItem(

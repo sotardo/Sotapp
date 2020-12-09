@@ -1,10 +1,9 @@
-import 'package:sotapp/clases/shared_prefs.dart';
-import 'package:sotapp/sotapp.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:sotapp/clean_app.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final prefs = SharedPrefs();
-  await prefs.initPrefs();
-  runApp(Sotapp());
+  await Firebase.initializeApp();
+  runApp(CleanApp());
 }
